@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TODO App</title>
 </head>
 <body>
-    <h1>Siema</h1>
+    <h1>TODO App</h1>
     Lista rzeczy do zrobienia:
     <ul id="list">
         <li>Przedmiot 1</li>
@@ -16,7 +16,15 @@
     <button id="addbutton">Dodaj</button>
 
     <script>
-        
+        const list = document.getElementById("list");
+        const input = document.getElementById("input");
+        const addbutton = document.getElementById("addbutton");
+
+        addbutton.onclick = () => {
+            const text = input.value;
+            list.innerHTML += "<li>" + text + "</li>"
+            input.value = "";
+        };
     </script>
 </body>
 </html>
