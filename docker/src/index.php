@@ -8,13 +8,18 @@
 </head>
 <body>
     <?php
-        if(isset($_POST["message"])) {
-            echo "Wpisany tekst: " . $_POST["message"];
+        if(isset($_POST["liczba1"])) {
+            $liczba1 = $_POST["liczba1"];
+            $liczba2 = $_POST["liczba2"];
+            $wynik = $liczba1 + $liczba2;
+            echo "Wynik: " . $wynik;
         }
     ?>
+
     <form method="post">
-        <input type="text" name="message">
-        <input type="submit" value="Wyślij">
+        <input type="text" name="liczba1">
+        <input type="text" name="liczba2">
+        <input type="submit">
     </form>
 </body>
 </html>
