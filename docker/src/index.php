@@ -8,18 +8,20 @@
 </head>
 <body>
     <?php
-        if(isset($_POST["liczba1"])) {
-            $liczba1 = $_POST["liczba1"];
-            $liczba2 = $_POST["liczba2"];
-            $wynik = $liczba1 + $liczba2;
-            echo "Wynik: " . $wynik;
+        $zalogowany = false;
+
+        if($zalogowany) {
+            echo "Jesteś zalogowany!";
+        }
+        else {
+            echo "Nie jesteś zalogowany";
         }
     ?>
 
     <form method="post">
-        <input type="text" name="liczba1">
-        <input type="text" name="liczba2">
-        <input type="submit">
+        <input type="text" placeholder="Login" name="login">
+        <input type="password" placeholder="Hasło" name="password">
+        <input type="submit" value="Zaloguj">
     </form>
 </body>
 </html>
