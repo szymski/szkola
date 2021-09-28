@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    include "session.php";
 ?>
 
 <!DOCTYPE html>
@@ -12,34 +12,22 @@
 </head>
 <body>
     <?php
-        $logged_in = isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == true;
-
-
         // Obsługa logowania
         if(isset($_POST["login"]))
         {
             $login = $_POST["login"];
             $password = $_POST["password"];
 
-            if($login == "admin" && $password == "1234") {
-                $_SESSION["logged_in"] = true;
-                $logged_in = true;
-                echo "Dane prawidłowe!";
-            }
-            else {
-                echo "Dane nieprawidłowe!";
-            }
+            do_login($login, $password);
         }
 
         // Obsługa wylogowania
         if(isset($_POST["logout"])) {
-            session_destroy();
-            $logged_in = false;
-            echo "Wylogowano!";
+            logout();
         }
     ?>
 
-    <?php if(!$logged_in) { ?>
+    <?php if(!is_logged_in()) { ?>
         
     <form action="" method="post">
         <input type="text" placeholder="Login" name="login">
