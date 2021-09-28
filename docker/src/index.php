@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,20 +12,47 @@
 </head>
 <body>
     <?php
-        $zalogowany = false;
+        $logged_in = isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == true;
 
-        if($zalogowany) {
-            echo "Jesteś zalogowany!";
+
+        // Obsługa logowania
+        if(isset($_POST["login"]))
+        {
+            $login = $_POST["login"];
+            $password = $_POST["password"];
+
+            if($login == "admin" && $password == "1234") {
+                $_SESSION["logged_in"] = true;
+                $logged_in = true;
+                echo "Dane prawidłowe!";
+            }
+            else {
+                echo "Dane nieprawidłowe!";
+            }
         }
-        else {
-            echo "Nie jesteś zalogowany";
+
+        // Obsługa wylogowania
+        if(isset($_POST["logout"])) {
+            session_destroy();
+            $logged_in = false;
+            echo "Wylogowano!";
         }
     ?>
 
-    <form method="post">
+    <?php if(!$logged_in) { ?>
+        
+    <form action="" method="post">
         <input type="text" placeholder="Login" name="login">
         <input type="password" placeholder="Hasło" name="password">
         <input type="submit" value="Zaloguj">
     </form>
+
+    <?php } else { ?>
+        <b>Jesteś zalogowany!</b>
+        <form method="post">
+            <input type="hidden" name="logout">
+            <input type="submit" value="Wyloguj">
+        </form>
+    <?php } ?>
 </body>
 </html>
