@@ -27,20 +27,11 @@
         }
     ?>
 
-    <?php if(!is_logged_in()) { ?>
-        
-    <form action="" method="post">
-        <input type="text" placeholder="Login" name="login">
-        <input type="password" placeholder="Hasło" name="password">
-        <input type="submit" value="Zaloguj">
-    </form>
-
-    <?php } else { ?>
-        <b>Jesteś zalogowany!</b>
-        <form method="post">
-            <input type="hidden" name="logout">
-            <input type="submit" value="Wyloguj">
-        </form>
-    <?php } ?>
+    <?php
+        if(!is_logged_in())
+            include "loginform.php";
+        else
+            include "main.php";
+    ?>
 </body>
 </html>
