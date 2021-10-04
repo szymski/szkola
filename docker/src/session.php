@@ -23,7 +23,17 @@
 
     function register($login, $password) {
         $users = array();
+        
+        // Jeśli istnieje juz plik users.json, ladujemy go
+        if(file_exists("users.json")) {
+            $file_content = file_get_contents("users.json");
+            $users = json_decode($file_content, true);
+        }
+
+        // Dodajemy uzytkownika
         $users[$login] = $password;
+
+        // Zapisujemy ponownie jako users.json
         $json = json_encode($users);
         file_put_contents("users.json", $json);
 
