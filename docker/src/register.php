@@ -1,3 +1,15 @@
+<?php
+    include "session.php";
+
+    if(isset($_POST["login"])) {
+        $login = $_POST["login"];
+        $password = $_POST["password"];
+
+        register($login, $password);
+        echo "Zapisano do pliku!";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,8 +55,8 @@
     <form method="post" class="register-form">
         <h5>Rejestracja</h5>
         <input type="text" placeholder="Login" name="login" id="login">
-        <input type="passwordX" placeholder="Hasło" name="password" id="password">
-        <input type="passwordX" placeholder="Powtórz hasło" name="password2" id="password2">
+        <input type="password" placeholder="Hasło" name="password" id="password">
+        <input type="password" placeholder="Powtórz hasło" name="password2" id="password2">
         <input type="submit" value="Zarejestruj" id="button">
     </form>
 

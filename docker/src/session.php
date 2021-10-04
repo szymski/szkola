@@ -20,4 +20,15 @@
         $_SESSION["logged_in"] = false;
         echo "Wylogowano!";
     }
+
+    function register($login, $password) {
+        $users = array();
+        $users[$login] = $password;
+        $json = json_encode($users);
+        file_put_contents("users.json", $json);
+    }
+
+    // function read_users_file() {
+
+    // }
 ?>
