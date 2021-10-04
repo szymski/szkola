@@ -26,9 +26,14 @@
         $users[$login] = $password;
         $json = json_encode($users);
         file_put_contents("users.json", $json);
+
+        // Zadanie - dodać nowego uzytkownika do pliku, bez nadpisywania pliku
     }
 
-    // function read_users_file() {
-
-    // }
+    // Potrzebne funkcje
+    // https://www.php.net/manual/en/function.file-put-contents.php
+    // https://www.php.net/manual/en/function.file-get-contents.php
+    // https://www.php.net/manual/en/function.file-exists.php
+    // https://www.php.net/manual/en/function.json-encode.php
+    // https://www.php.net/manual/en/function.json-decode
 ?>
