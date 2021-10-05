@@ -6,7 +6,9 @@
     }
 
     function do_login($username, $password) {
-        if($username == "admin" && $password == "1234") {
+        $users = read_users();
+
+        if(isset($users[$username]) && $users[$username] == $password) {
             $_SESSION["logged_in"] = true;
             echo "Dane prawidłowe!";
         }
