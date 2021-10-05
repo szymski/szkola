@@ -22,13 +22,7 @@
     }
 
     function register($login, $password) {
-        $users = array();
-        
-        // Jeśli istnieje juz plik users.json, ladujemy go
-        if(file_exists("users.json")) {
-            $file_content = file_get_contents("users.json");
-            $users = json_decode($file_content, true);
-        }
+        $users = read_users();
 
         // Dodajemy uzytkownika
         $users[$login] = $password;
@@ -36,14 +30,16 @@
         // Zapisujemy ponownie jako users.json
         $json = json_encode($users);
         file_put_contents("users.json", $json);
-
-        // Zadanie - dodać nowego uzytkownika do pliku, bez nadpisywania pliku
     }
 
-    // Potrzebne funkcje
-    // https://www.php.net/manual/en/function.file-put-contents.php
-    // https://www.php.net/manual/en/function.file-get-contents.php
-    // https://www.php.net/manual/en/function.file-exists.php
-    // https://www.php.net/manual/en/function.json-encode.php
-    // https://www.php.net/manual/en/function.json-decode
+    function read_users() {
+        $users = array();
+
+        if(file_exists("users.json")) {
+            $file_content = file_get_contents("users.json");
+            $users = json_decode($file_content, true);
+        }
+
+        return $users;
+    }
 ?>
