@@ -8,12 +8,21 @@
     function do_login($username, $password) {
         $users = read_users();
 
-        if(isset($users[$username]) && $users[$username] == $password) {
-            $_SESSION["logged_in"] = true;
-            echo "Dane prawidłowe!";
+        // Uzytkownik nie istnieje
+        // Haslo nieprawidlowe
+        // Zalogowano pomyslnie
+
+        if(isset($users[$username])) {
+            if($users[$username] == $password) {
+                $_SESSION["logged_in"] = true;
+                echo "Zalogowano pomyślnie!";
+            }
+            else {
+                echo "Błędne hasło!";
+            }
         }
         else {
-            echo "Dane nieprawidłowe!";
+            echo "Nie ma takiego usera!";
         }
     }
 
