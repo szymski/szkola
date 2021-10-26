@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wędkarstwo</title>
+    <link rel="stylesheet" href="styl_1.css">
+</head>
+<body>
+    <div class="banner">
+        <h1>Portal dla wędkarzy</h1>
+    </div>
+    <div class="left">
+        <h2>Ryby drapieżne naszych wód</h2>
+        <ul id="list">
+            
+        </ul>
+    </div>
+    <div class="right">
+        <img src="https://mediad.publicbroadcasting.net/p/shared/npr/201805/221688743.jpg" alt="Sum">
+        <br>
+        <a href="kwerendy.txt">Pobierz kwerendy</a>
+    </div>
+    <div class="footer">
+        <p>
+            Stronę wykonał: 123123123123123
+        </p>
+    </div>
+    <script type="text/javascript">
+        const list = document.getElementById("list");
+
+        for (let i = 2; i <= 10; i++) {
+            list.innerHTML += `<li>Test ${i}</li>`;
+        }
+    </script>
+</body>
+</html>

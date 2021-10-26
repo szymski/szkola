@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: Verdana;
+}
+
+.banner, .footer {
+    background: #4682B4;
+    color: white;
+    padding: 20px;
+    font-size: 120%;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.left {
+    background: #40E0D0;
+    height: 500px;
+    width: 40%;
+    float: left;
+}
+
+.right {
+    background: #40E0D0;
+    height: 500px;
+    width: 60%;
+    float: left;
+}
+
+img {
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #000080;
+}
