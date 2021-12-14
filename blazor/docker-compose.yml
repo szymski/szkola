@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  app:
+    build: ./BeProductive/
+    volumes:
+      - ./data/app/appsettings.json:/app/appsettings.json
+#      - ./data/app/database.db:/app/database.db
+    ports:
+      - "80:80"
+        
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: beproductive
+    volumes:
+      - ./data/db:/var/lib/postgresql
+    ports:
+      - "5432:5432"
