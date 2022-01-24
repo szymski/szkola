@@ -1,5 +1,5 @@
 body {
-    background: #ddd;
+    background: url('bg.png') #eee;
     font-family: 'Verdana';
     font-size: 14px;
 }
@@ -9,10 +9,11 @@ body {
     margin: auto;
     margin-top: 40px;
     padding: 32px; 
+    padding-bottom: 16px;
     background: white;
     border-radius: 4px;
     border: 1px solid #aaa;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 30%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 25%);
 }
 
 .top {
@@ -96,4 +97,16 @@ a:active {
 .paragraf {
     font-size: 12px;
     text-align: right;
+}
+
+.stopka {
+    padding: 12px 32px;
+    text-align: right;
+    color: #aaa;
+    font-size: 11px;
+    margin-top: 18px;
+    background: #eee;
+    margin-bottom: -16px;
+    margin-left: -32px;
+    margin-right: -32px;
 }
