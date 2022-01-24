@@ -15,6 +15,50 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 30%);
 }
 
+.top {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.header {
+    display: inline;
+    margin: auto;
+    color: rgb(175, 175, 175);
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 3px solid rgb(8, 129, 209);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.menu {
+    margin-top: 12px;
+}
+
+.menu a {
+    margin-left: 0 !important;
+    color: white;
+    background:rgb(8, 129, 209);
+    padding: 6px;
+    font-size: 11px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.menu a:hover {
+    background: rgb(63, 166, 235);
+    color: white;
+}
+
+.menu a:active {
+    background: rgb(30, 93, 138);
+    color: white;
+}
+
+/* .menu a:hover {
+    margin-left: 0;
+} */
+
 .sformatowany-tekst {
     color: red;
     /* font-family: 'Comic Sans MS'; */
