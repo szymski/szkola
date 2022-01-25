@@ -1,57 +1,110 @@
+html {
+    height: 100%;
+}
+
 body {
-    background: #aaa;
+    /* background: rgb(168, 168, 168); */
+    background: url('https://webcam.rybnik.eu/rynek.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 800px;
+    margin: auto;
+    margin-top: 32px;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(16px);
 }
 
 h1 {
+    display: inline;
     margin: 0;
+    border-bottom: 4px solid rgb(42, 87, 190);
 }
 
 .header {
-    background: rgb(5, 180, 87);
+    background: rgba(5, 180, 87, 0.5);
     padding: 32px;
     color: white;
     text-align: center;
+    border-radius: 8px 8px 0 0;
 }
 
 .block1 {
-    background: rgb(104, 225, 246);
-    width: 40%;
+    background: rgba(14, 225, 246, 0.5);
+    width: 70%;
 }
 
 .block2 {
-    background: rgb(246, 185, 104);
+    background: rgba(246, 185, 104, 50%);
     width: 30%;
 }
 
 .block3 {
-    background: rgb(182, 104, 246);
-    width: 30%;
-    min-height: 500px;
+    background: rgba(182, 104, 246, 0.5);
+    /* width: 30%; */
+    clear: both;
+    /* min-height: 100px; */
 }
 
-.block1, .block2, .block3 {
+.block1, .block2 {
     min-height: 500px;
     float: left;
 }
 
 .footer {
     clear: both;
-    background: rgb(223, 99, 99);
+    background: rgba(223, 99, 99, 0.5);
     padding: 16px;
     text-align: right;
     color: #fff;
+    border-radius: 0 0 8px 8px;
 }
 
 ul {
     list-style-type: circle;
 }
 
+table {
+    margin: 16px;
+}
+
 table, tr, td, th {
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    padding: 4px;
 }
 
 td {
-    border: 2px solid red;
+    background: linear-gradient(to bottom, white, rgb(238, 238, 238));
+    border: 1px solid rgb(70, 70, 70);
+}
+
+.table-header {
+    background: linear-gradient(to bottom, white, rgb(194, 194, 194));
+    border: 1px solid rgb(70, 70, 70);
+    font-weight: bold;
+    font-size: 12px;
+    padding: 4px;
+}
+
+input {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.div1 {
+    display: block;
+    background: yellowgreen;
+}
+
+.div2 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: violet;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    overflow-y: scroll;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="trzeci.css">
 </head>
+
 <body>
     <div class="header">
         <h1>Zadanie egzaminacyjne</h1>
     </div>
-    
+
     <div class="block1">
         <h3>asdasd</h3>
         <ul>
@@ -26,20 +28,37 @@
         </ul>
 
         <table>
-            <thead>
-                <th>Kolumna 1</th>
-                <th>Kolumna 2</th>
-                <th>Kolumna 3</th>
-            </thead>
             <tr>
-                <td colspan="2" style="background: orangered; color: white;">Kolumna 1</td>
-                <td>Kolumna 2</td>
+                <td colspan="3" class="table-header">Nagłówek kolumny</td>
+                <!-- <td>Kolumna 2</td>
+                <td>Kolumna 3</td> -->
             </tr>
             <tr>
-                <td>Kolumna 1</td>
-                <td colspan="2">Kolumna 2</td>
+                <td rowspan="2">Kolumna 1</td>
+                <td>Kolumna 2</td>
+                <td>Kolumna 3</td>
+            </tr>
+            <tr>
+                <td>Kolumna 2</td>
+                <td>Kolumna 3</td>
             </tr>
         </table>
+
+        <hr>
+
+        <div style="padding: 16px">
+            <form action="http://google.com">
+                <input type="text" name="login" placeholder="Login">
+                <input type="password" name="password" placeholder="Hasło">
+                <input type="text" name="asdasd" placeholder="Wpisz coś">
+                <input type="submit" value="Zaloguj">
+            </form>
+
+            <div class="div1">To jest display block</div>
+            <div class="div1">To jest display block inline inline inline inline inline </div>
+            <div class="div2">To jest display inline inline inline inline inlineasdasdasdasd asdasda d23234 d23234 d23234d23234 d23234d23234d23234 d23234d23234 d23234</div>
+            <!-- <div class="div2">To jest display inline</div> -->
+        </div>
     </div>
     <div class="block2">
         <ol>
@@ -50,13 +69,16 @@
         </ol>
     </div>
     <div class="block3">
-        <p style="font-size: 12px; padding: 8px; color: white;">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cupiditate omnis natus explicabo ut quia delectus, odit aliquam dicta ducimus atque voluptates sit vero deleniti, iste blanditiis, consectetur nulla magni.
-        </p>
+        <span style="font-size: 12px; margin: 16px; color: white;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cupiditate omnis natus explicabo ut quia
+            delectus, odit aliquam dicta ducimus atque voluptates sit vero deleniti, iste blanditiis, consectetur nulla
+            magni.
+        </span>
     </div>
 
     <div class="footer">
         To jest stopka &copy; 2022
     </div>
 </body>
+
 </html>
