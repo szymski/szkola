@@ -1,0 +1,57 @@
+body {
+    background: #aaa;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    margin: 0;
+}
+
+.header {
+    background: rgb(5, 180, 87);
+    padding: 32px;
+    color: white;
+    text-align: center;
+}
+
+.block1 {
+    background: rgb(104, 225, 246);
+    width: 40%;
+}
+
+.block2 {
+    background: rgb(246, 185, 104);
+    width: 30%;
+}
+
+.block3 {
+    background: rgb(182, 104, 246);
+    width: 30%;
+    min-height: 500px;
+}
+
+.block1, .block2, .block3 {
+    min-height: 500px;
+    float: left;
+}
+
+.footer {
+    clear: both;
+    background: rgb(223, 99, 99);
+    padding: 16px;
+    text-align: right;
+    color: #fff;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+table, tr, td, th {
+    border: 1px solid black;
+}
+
+td {
+    border: 2px solid red;
+}
