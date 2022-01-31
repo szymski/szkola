@@ -1,12 +1,17 @@
 const btn = document.getElementById("btn");
+const btn2 = document.getElementById("btn2");
 const pole = document.getElementById("pole");
+const p = document.getElementById("paragraf");
 
 btn.onclick = function() {
-    let wartosc = pole.value;
-    
-    if(wartosc == "msg") {
-        alert("Witaj!");
-    }
-
-    pole.value = "1234";
+    funkcja("Hello World!");
 };
+
+btn2.onclick = function() {
+    const wartosc = pole.value;
+    funkcja(wartosc);
+};
+
+function funkcja(msg) {
+    p.innerHTML = "<b>" + msg + "</b>";
+}
