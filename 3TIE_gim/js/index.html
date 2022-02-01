@@ -7,16 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="btn">
-        Kliknij mnie
-    </button>
-    <button id="btn2">
-        Drugi guzik
-    </button>
-    <input type="text" id="pole">
-    <p id="paragraf">
-        Jakiś tekst
-    </p>
+    <input type="text" style="margin-bottom: 2px;" placeholder="Twój nick">
+    <div id="chat" style="min-height: 300px; border: 1px solid gray;"></div>
+    <div style="margin-top: 2px">
+        <input id="message" style="width: 80%; float: left" type="text">
+        <button id="btn" onclick="send()" style="width: 18%; float: right">Wyślij</button>
+    </div>
 
     <script src="main.js"></script>
 </body>
