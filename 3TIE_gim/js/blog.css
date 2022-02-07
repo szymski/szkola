@@ -5,12 +5,13 @@ body {
 
 .content {
     width: 600px;
-    min-height: 500px;
+    min-height: 300px;
     margin: auto;
     margin-top: 24px;
     background: white;
     border-radius: 4px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
 }
 
 .header {
