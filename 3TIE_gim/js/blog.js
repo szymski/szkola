@@ -20,12 +20,12 @@ addButton.onclick = () => {
 };
 
 showFormBtn.onclick = () => {
-    if(form.style.display == "none") {
+    if(form.classList.contains("hidden")) {
         showFormBtn.innerHTML = "Ukryj formularz";
-        form.setAttribute("style", "display: block");
+        form.classList.remove("hidden");
     }
     else {
         showFormBtn.innerHTML = "Dodaj post";
-        form.setAttribute("style", "display: none");
+        form.classList.add("hidden");
     }
 };

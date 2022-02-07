@@ -53,14 +53,24 @@ body {
 }
 
 .add-form {
+    height: 150px;
     margin: 8px;
     padding: 8px;
     border: 2px solid rgb(168, 168, 168);
     background: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
 }
 
 .add-form * {
     display: block;
     width: 100%;
     margin-bottom: 4px;
+    box-sizing: border-box;
+}
+
+.hidden {
+    height: 0;
+    opacity: 0;
 }
