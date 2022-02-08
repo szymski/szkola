@@ -1,3 +1,12 @@
+/*
+    Polecenie - dodaj walidacje do formularza.
+    W przypadku błędu, wyświetlić go w alercie lub w jakimś miejscu na stronie.
+    Walidacje:
+    - Tytuł i treść nie mogą być puste
+    - Tytuł musi mieć przynajmniej 5 znaków, maksymalnie 30
+    - Treść musi mieć przynajmniej 10 znaków, maksymalnie 200
+*/
+
 const titleInput = document.getElementById("title");
 const contentInput = document.getElementById("content");
 const addButton = document.getElementById("add-button");
@@ -53,6 +62,11 @@ addButton.onclick = () => {
     });
 
     renderPosts();
+
+    titleInput.value = "";
+    contentInput.value = "";
+
+    hideForm();
 };
 
 function deletePost(link) {
@@ -67,7 +81,11 @@ showFormBtn.onclick = () => {
         form.classList.remove("hidden");
     }
     else {
-        showFormBtn.innerHTML = "Dodaj post";
-        form.classList.add("hidden");
+        hideForm();
     }
 };
+
+function hideForm() {
+    form.classList.add("hidden");
+    showFormBtn.innerHTML = "Dodaj post";
+}
