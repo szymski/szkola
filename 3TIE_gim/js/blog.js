@@ -5,8 +5,11 @@ const postContainer = document.getElementById("posts");
 const form = document.getElementById("form");
 const showFormBtn = document.getElementById("show-form");
 
+let lastId = 1;
+
 let posts = [
     {
+        id: 1,
         title: "Tytuł posta",
         content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur perferendis doloribus modi obcaecati tempora, officiis eos atque. Laborum perspiciatis provident laboriosam mollitia dolorum vitae itaque, officiis necessitatibus nostrum qui. Suscipit. Expedita, assumenda. Sint hic voluptatibus reiciendis nostrum nesciunt id, voluptas pariatur deserunt sed necessitatibus itaque quod iusto vero, accusamus illo minus veritatis dolor consequuntur qui expedita, tenetur magni ex? Provident!",
         date: new Date().toLocaleString("pl"),
@@ -26,7 +29,7 @@ function renderPosts() {
                 <div class="title">${post.title}</div>
                 <div class="date">
                     ${post.date}
-                    <a href="#" style="vertical-align: middle" data-id="${post.title}" onclick="deletePost(this)">
+                    <a href="#" style="vertical-align: middle" data-id="${post.id}" onclick="deletePost(this)">
                         <img height="16" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Flat_cross_icon.svg" alt="">
                     </a>
                 </div>
@@ -43,6 +46,7 @@ addButton.onclick = () => {
     const content = contentInput.value;
 
     posts.push({
+        id: ++lastId,
         title: title,
         content: content,
         date: new Date().toLocaleString("pl"),
@@ -53,7 +57,7 @@ addButton.onclick = () => {
 
 function deletePost(link) {
     const id = link.getAttribute("data-id");
-    posts = posts.filter(post => post.title != id);
+    posts = posts.filter(post => post.id != id);
     renderPosts();
 }
 
