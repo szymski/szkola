@@ -3,7 +3,7 @@ const tresc = document.querySelector(".tresc");
 const listaElementow = document.querySelectorAll(".divek");
 
 let i = 0;
-for(const el of listaElementow) {
+for (const el of listaElementow) {
     i++;
     el.style.background = `hsl(${i * 20}, 100%, 50%)`;
     el.innerHTML = `Element ${i}`;
