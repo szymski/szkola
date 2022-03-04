@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    /* background: yellow; */
+    text-align: center;
+}
+
+.stats h3 {
+    margin-top: -15px;
+    color: #bbb;
+    font-weight: lighter;
+}
+
+#cookieButton {
+    width: 250px;
+    height: 250px;
+    background: none;
+    /* background: red; */
+    border: none;
+    cursor: pointer;
+}
+
+#cookieButton img {
+    width: 100%;
+    height: 100%;
+    transition: 0.15s;
+}
+
+#cookieButton:hover img {
+    transform: scale(1.1);
+}
+
+#cookieButton:active img {
+    transform: scale(0.9);
+}
+
+.shop {
+    width: 400px;
+    margin: auto;
+    padding: 5px;
+    background: #eee;
+}
+
+.shop .items {}
