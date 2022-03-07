@@ -37,10 +37,55 @@ body {
 }
 
 .shop {
-    width: 400px;
+    width: fit-content;
     margin: auto;
     padding: 5px;
-    background: #eee;
+    background: rgb(87, 149, 230);
 }
 
-.shop .items {}
+.shop .title {
+    margin-bottom: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.item {
+    display: inline-block;
+    width: 120px;
+    margin: 2px;
+    padding: 10px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.item:hover {
+    background: rgb(255, 233, 191);
+    transform: scale(1.05);
+}
+
+.item:active {
+    background: rgb(255, 181, 44);
+    transform: scale(0.95);
+}
+
+.item .image {
+    width: 100%;
+    /* background: yellow; */
+    transition: 0.35s;
+}
+
+.item:hover .image {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.item:active .image {
+    transform: rotate(-10deg) scale(0.9);
+}
+
+.item .price {
+    color: #bbb;
+    font-size: 12px;
+}
