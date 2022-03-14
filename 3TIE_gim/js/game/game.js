@@ -6,7 +6,9 @@ const itemsContainer = document.querySelector("#items");
 
 // Game variables
 let points = 0;
-let pointsPerSecond = 1;
+let pointsPerSecond = 0;
+
+setPointsPerSecond(1);
 
 //#region HTML event handlers
 
@@ -16,8 +18,9 @@ cookieButton.onclick = onCookieClick;
 
 // Point functions
 
-function onCookieClick() {
+function onCookieClick(event) {
     addPoints(pointsPerSecond);
+    addPointsEffect(event.clientX, event.clientY, pointsPerSecond);
 }
 
 function addPoints(number) {
@@ -114,6 +117,23 @@ function onItemClick(item) {
     item.price += Math.round(item.price * 0.1);
 
     renderShopItems();
+}
+
+//#endregion
+
+//#region Effects
+
+function addPointsEffect(x, y, number) {
+    const el = document.createElement("span");
+    el.className = "effect";
+    el.innerHTML = `+${number}`;
+    el.style.left = `${x}px`;
+    el.style.top = `${y}px`;
+    document.body.appendChild(el);
+
+    setTimeout(() => {
+        el.remove();
+    }, 5000);
 }
 
 //#endregion

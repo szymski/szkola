@@ -88,3 +88,23 @@ body {
     color: #bbb;
     font-size: 12px;
 }
+
+.effect {
+    position: fixed;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 2px black;
+    animation: 5s anim;
+    pointer-events: none;
+}
+
+@keyframes anim {
+    from {
+        opacity: 2;
+    }
+    to {
+        opacity: 0;
+        top: 0px;
+    }
+}
