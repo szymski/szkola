@@ -1,0 +1,28 @@
+.lewa {
+    background: yellow;
+    float: left;
+    width: 30%;
+}
+
+.prawa {
+    background: red;
+    float: left;
+    width: 70%;
+}
+
+.lewa,
+.prawa {
+    min-height: 500px;
+}
+
+.image {
+    background: green;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+}
+
+div {
+    border-radius: 10px;
+    color: white;
+}
