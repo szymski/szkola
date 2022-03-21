@@ -3,6 +3,7 @@ const cookieButton = document.querySelector("#cookieButton");
 const pointsLabel = document.querySelector("#pointsLabel");
 const perSecondLabel = document.querySelector("#perSecondLabel");
 const itemsContainer = document.querySelector("#items");
+const leaderboardContainer = document.querySelector("#leaderboard-container");
 
 // Game variables
 let points = 0;
@@ -118,6 +119,44 @@ function onItemClick(item) {
 
     renderShopItems();
 }
+
+//#endregion
+
+//#region Leaderboard
+
+function updateLeaderboard(data) {
+    leaderboardContainer.innerHTML = "";
+
+    for (const player of data) {
+        leaderboardContainer.innerHTML += `
+        <div class="player-row">
+            <span class="player-name">${player.name}</span>
+            <span class="player-score">${Math.round(player.points)}</span>
+        </div>
+`;
+    }
+}
+
+setInterval(() => {
+    // Load other players' score
+    fetch("http://game.szymekk.me/leaderboard")
+        .then(response => response.json())
+        .then(json => {
+            updateLeaderboard(json);
+        });
+
+    // Send our score to the server
+    fetch("http://game.szymekk.me/leaderboard/send", {
+        method: "POST",
+        body: JSON.stringify({
+            name: "Szymekk",
+            points: points
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+}, 1000);
 
 //#endregion
 

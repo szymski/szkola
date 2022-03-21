@@ -97,6 +97,7 @@ body {
     text-shadow: 0 0 2px black;
     animation: 5s anim;
     pointer-events: none;
+    transform: translate(-50%, -100%);
 }
 
 @keyframes anim {
@@ -108,3 +109,30 @@ body {
         top: 0px;
     }
 }
+
+#leaderboard {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding: 8px;
+    border: 1px solid rgb(148, 148, 148);
+    font-size: 14px;
+    color: rgb(50, 145, 235);
+    border-radius: 4px;
+}
+
+#leaderboard-container {
+    font-size: 12px;
+    color: #000;
+}
+
+.player-row {
+    font-weight: bold;
+}
+
+.player-name {
+    font-weight: lighter;
+    color: #999;
+}
+
+.player-score {}
