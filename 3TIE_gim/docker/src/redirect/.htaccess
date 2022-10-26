@@ -1,0 +1,6 @@
+Redirect 301 https://google.com
+
+#AuthType basic
+#AuthName "private"
+#AuthUserFile /srv/httpd/.htpasswd
+#Require valid-user

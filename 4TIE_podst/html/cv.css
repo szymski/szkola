@@ -1,0 +1,48 @@
+body {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.left {
+    background: #a4b9d1;
+    float: left;
+    width: 30%;
+    min-height: 600px;
+    text-align: center;
+}
+
+.right {
+    background: white;
+    width: 70%;
+    min-height: 600px;
+    float: left;
+}
+
+.content {
+    margin: 20px 10px;
+}
+
+.avatar {
+    width: 120px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.avatar:hover {
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 32px;
+    color: blue;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: orange;
+}
+
+a:active {
+    color: green;
+}

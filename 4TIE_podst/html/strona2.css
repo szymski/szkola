@@ -24,12 +24,14 @@ body {
 }
 
 .right {
-    width: 30%;
+    width: 70%;
     float: left;
     background: lightgreen;
 }
 
-.left, .center, .right {
+.left,
+.center,
+.right {
     min-height: 400px;
 }
 
@@ -45,8 +47,8 @@ body {
 }
 
 ul {
-    list-style: none;
-    padding: 8px;
+    /* list-style: none; */
+    /* padding: 8px; */
 }
 
 table {
@@ -59,11 +61,33 @@ td {
     background: white;
 }
 
-td, tr, table {
+td,
+tr,
+table {
     border: 1px solid rgb(158, 158, 158);
 }
 
 th {
     padding: 4px 6px;
     color: rgba(0, 0, 0, 50%);
+}
+
+.myspan {
+    background: linear-gradient(to bottom, yellow, #ff0000);
+}
+
+.right * {
+    /* background: linear-gradient(to bottom, #ff0000, yellow); */
+}
+
+#span {
+    color: blue;
+    display: block;
+}
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    margin: 0.25rem;
 }

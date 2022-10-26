@@ -28,6 +28,13 @@ Sesja:
     </pre>
 </code>
 
+<code>
+    <pre>
+Ciastka: 
+<?php print_r($_COOKIE); ?>
+    </pre>
+</code>
+
 <!-- Login form -->
 <?php
 if (isset($_SESSION["logged_in"])) {

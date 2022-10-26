@@ -1,5 +1,5 @@
 .lewa {
-    background: yellow;
+    background: rgb(76, 175, 175);
     float: left;
     width: 30%;
 }
@@ -20,6 +20,13 @@
     width: 128px;
     height: 128px;
     border-radius: 50%;
+    margin: 20px;
+    border: 5px solid white;
+    transition: 1s;
+}
+
+.image:hover {
+    transform: scale(1.2) rotateY(30deg);
 }
 
 div {

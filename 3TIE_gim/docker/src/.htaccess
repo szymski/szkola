@@ -1,0 +1,7 @@
+Options -Indexes
+ErrorDocument 404 /404.html
+
+<FilesMatch "^config.php">
+Order Deny,Allow
+Deny from All
+</FilesMatch>
