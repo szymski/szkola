@@ -1,6 +1,6 @@
 Gotowe zadania proszę wysyłać spakowane (np zipem) na: szkola@szymekk.me
 
-Stwórz stronę HTML z dołączonym skryptem JS (w prawidłowy sposób, patrz zad.3) i stylami (może być `<style><style>` lub w osobnym pliku).
+Stwórz stronę HTML z dołączonym skryptem JS (w prawidłowy sposób, patrz zad.2) i stylami (może być `<style><style>` lub w osobnym pliku).
 Style dowolne, ale ładne strony z animacjami, przejściami itd., ocenię lepiej :)
 
 Na stronie powinien znajdować się input oraz guzik (dodatkowe punkty za placeholder i style). Po naciśnięciu guzika, z pola tekstowego jest pobierany tekst, zapisz go do zmiennej.
