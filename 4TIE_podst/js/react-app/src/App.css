@@ -8,3 +8,32 @@ body {
     font-size: calc(10px + 2vmin);
     color: white;
 }
+
+input {
+    box-sizing: border-box;
+}
+
+button {
+    border: 2px solid rgb(0, 75, 124);
+    border-radius: 8px;
+    background: rgb(33, 133, 199);
+    color: white;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+button:hover {
+    background: rgb(73, 177, 247);
+    transform: translateY(-2px);
+}
+
+button:active {
+    border: 2px solid rgb(14, 117, 185);
+    background: rgb(25, 85, 125);
+    transform: translateY(2px);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
