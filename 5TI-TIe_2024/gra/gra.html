@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gra.css">
+    <script src="gra.js"></script>
+</head>
+
+<body>
+    <h1 class="cookie-count">
+        Liczba ciasteczek: <span id="cookie-count">0</span>
+    </h1>
+    <h3 class="cookie-per-sec">
+        Ciastka na sekundę: <span id="cookie-per-second">0</span>
+    </h3>
+
+    <button class="cookie" onclick="onCookieClick()"></button>
+
+    <div class="shop">
+        <span>Sklepik</span>
+        <div class="items">
+            <button class="item">
+                Cursor - 0
+                <br>
+                <span class="item-price">
+                    20 ciasteczek
+                </span>
+            </button>
+            <button disabled class="item">
+                Zablokowane
+            </button>
+            <button disabled class="item">
+                Zablokowane
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

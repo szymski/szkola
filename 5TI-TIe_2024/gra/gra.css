@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cookie-count {
+    font-size: 30px;
+    margin: 2rem;
+    margin-bottom: 0;
+}
+
+.cookie-per-sec {
+    margin-top: 0;
+    color: #666;
+    font-weight: normal;
+}
+
+.cookie {
+    width: 200px;
+    height: 200px;
+    background-image: url('cookie.png');
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 64px;
+    border: none;
+    transition: 0.2s;
+}
+
+.cookie:hover {
+    transform: scale(1.1);
+}
+
+.cookie:active {
+    transform: scale(0.9);
+}
+
+.shop {
+    background: #ddd;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    padding: 12px;
+    min-width: 500px;
+}
+
+.shop .items {
+    display: flex;
+    margin-top: 8px;
+    gap: 10px;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    border: 1px solid rgb(175, 143, 74);
+    background: #ffdc91;
+}
+
+.item:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.item:hover {
+    background: #ffebc1;
+    cursor: pointer;
+}
+
+.item .item-price {
+    opacity: 0.75;
+    font-size: 12px;
+}
