@@ -1,0 +1,23 @@
+.naglowek {
+    color: violet;
+    font-family: Consolas;
+}
+
+.login-panel {
+    background: rgb(255, 196, 255);
+    margin: 50px;
+    padding: 20px;
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.circle {
+    background: green;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin: auto;
+}
